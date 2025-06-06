@@ -14,25 +14,20 @@ export default defineConfig(({ mode }) => ({
     mode === 'development' &&
     componentTagger(),
   ].filter(Boolean),
-  base: process.env.NODE_ENV === 'production' ? '/2zakazVikings/' : '/',
+  base: '/2zakazVikings/',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
     rollupOptions: {
       output: {
         manualChunks: undefined,
-        entryFileNames: 'assets/[name].js',
-        chunkFileNames: 'assets/[name].js',
-        assetFileNames: 'assets/[name].[ext]'
+        entryFileNames: 'assets/index-[hash].js',
+        chunkFileNames: 'assets/[name]-[hash].js',
+        assetFileNames: 'assets/[name]-[hash].[ext]'
       }
     },
-    sourcemap: true,
-    minify: 'terser',
-    terserOptions: {
-      format: {
-        comments: false,
-      },
-    },
+    sourcemap: false,
+    minify: true,
   },
   resolve: {
     alias: {
