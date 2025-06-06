@@ -74,7 +74,7 @@ const ContactSection = () => {
                     <MessageSquare className="w-6 h-6 text-viking-orange" />
                     <div>
                       <div className="font-medium text-gray-800">Telegram</div>
-                      <div className="text-viking-orange">@</div>
+                      <a href="https://t.me/basketballvikings" target="_blank" rel="noopener noreferrer" className="text-viking-orange hover:text-viking-red transition-colors">@basketballvikings</a>
                     </div>
                   </div>
                   <div className="flex items-center space-x-3">

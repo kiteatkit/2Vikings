@@ -18,7 +18,7 @@ const trainers = [
     role: "Главный тренер",
     experience: "Многолетний опыт",
     image: "/trainers/1t.png",
-    description: "Неоднократный призёр Суперлиги / Кубок России, играл в сборной U-16 и продолжающий играть на высоком любительском уровне!"
+    description: "Неоднократный призёр Суперлиги и Кубок России, играл в сборной U-16 и продолжающий играть на высоком любительском уровне!"
   },
   
 ];
@@ -129,15 +129,17 @@ const AboutSection = () => {
 
         <div className="grid md:grid-cols-2 gap-12 items-start">
           {/* Карточка главного тренера */}
-          <Card className="overflow-hidden hover:shadow-xl transition-all duration-300">
+          <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 hover:rotate-1">
             <CardContent className="p-0">
               <div className="relative">
-                <Avatar className="w-full h-96 rounded-none">
-                  <AvatarImage src={trainers[0].image} alt={trainers[0].name} />
-                  <AvatarFallback className="bg-viking-orange/10 text-4xl">
-                    {trainers[0].name.split(' ').map(n => n[0]).join('')}
-                  </AvatarFallback>
-                </Avatar>
+                <div className="aspect-[3/4] w-full">
+                  <Avatar className="w-full h-full rounded-none">
+                    <AvatarImage src={trainers[0].image} alt={trainers[0].name} className="object-cover" />
+                    <AvatarFallback className="bg-viking-orange/10 text-4xl">
+                      {trainers[0].name.split(' ').map(n => n[0]).join('')}
+                    </AvatarFallback>
+                  </Avatar>
+                </div>
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
                   <h3 className="text-2xl font-bold text-white mb-1">{trainers[0].name}</h3>
                   <p className="text-viking-orange font-semibold">{trainers[0].role}</p>
