@@ -21,12 +21,18 @@ export default defineConfig(({ mode }) => ({
     rollupOptions: {
       output: {
         manualChunks: undefined,
-        entryFileNames: 'assets/[name]-[hash].js',
-        chunkFileNames: 'assets/[name]-[hash].js',
-        assetFileNames: 'assets/[name]-[hash].[ext]'
+        entryFileNames: 'assets/[name].js',
+        chunkFileNames: 'assets/[name].js',
+        assetFileNames: 'assets/[name].[ext]'
       }
     },
-    sourcemap: true
+    sourcemap: true,
+    minify: 'terser',
+    terserOptions: {
+      format: {
+        comments: false,
+      },
+    },
   },
   resolve: {
     alias: {
