@@ -37,11 +37,9 @@ const Footer = () => {
             <h4 className="text-lg font-bold mb-4 text-viking-orange">Социальные сети</h4>
             <div className="space-y-2">
               <a href="https://t.me/basketballvikings" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors">
-                <span>📱</span>
                 <span>Telegram: @basketballvikings</span>
               </a>
               <a href="#" className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors">
-                <span>📞</span>
                 <span>+7 () --</span>
               </a>
             </div>
